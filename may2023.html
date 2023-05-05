@@ -59,13 +59,109 @@
         or concerns.
       </p>
 
-      <div class="buttons">
-        <!-- <a href="https://forms.gle/hkxBBYggCgJ3iz9M6">Submit a Talk Proposal</a> -->
-        <a class="disabled" aria-disabled="true">Talk Submissions are Closed</a>
-        <a href="https://forms.gle/oVpJo7SXutsZUjND6">Register to Attend</a>
-        <!-- <a class="disabled" aria-disabled="true">Registration Opens March 1st</a> -->
-      </div>
+      <table class="schedule">
+        <tr>
+          <td>9:00 AM</td>
+          <td>Breakfast</td>
+        </tr>
+        <tr>
+          <td>10:00 AM</td>
+          <td>TBD</td>
+          <td align="right">Richard Eisenberg <em>Jane Street</em></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <p>TBD</p>
+          </td>
+        </tr>
+        <tr>
+          <td>10:20 AM</td>
+          <td>Intensional Functions</td>
+          <td align="right">Zachary Palmer <em>Swarthmore College</em></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <p>
+              Functions in functional languages have a single eliminator — application — and cannot be compared,
+              hashed, or subjected to other non-application operations. Such operations are usually approximated via
+              defunctionalization: functions are replaced with first-order data and calls are replaced with invocations
+              of
+              a dispatch function. We can then subject these first-order data to e.g. approximate equality, allowing
+              (among other operations) the deduplication of continuations in a long-running computation. Unfortunately,
+              surface-level defunctionalization is a laborious, error-prone, and maintenance-inducing transformation.
+            </p>
+            <p>
+              In this talk, we discuss ""intensional functions"": a language feature which provides an alternative to
+              manual defunctionalization. Intensional functions support non-application operations such as equality or
+              hashing in terms of the program point at which the function was defined and the values it captured in
+              closure. We then discuss one implication of this language feature: as intensional functions are functions
+              which can be compared, hashed, and so on, so ""intensional monads"" are composable units of computation
+              which can be compared, hashed, and so on. We illustrate this discussion with a practical example: the
+              legible definition of efficient deductive closures."
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>10:40 AM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>11:00 AM</td>
+          <td>Coffee</td>
+        </tr>
+        <tr>
+          <td>11:20 AM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>11:40 AM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>12:00 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>12:20 PM</td>
+          <td>Lunch</td>
+        </tr>
+        <tr>
+          <td>1:40 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>2:00 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>2:20 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>2:40 PM</td>
+          <td>Coffee</td>
+        </tr>
+        <tr>
+          <td>3:20 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>3:40 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>4:00 PM</td>
+          <td>Talk</td>
+        </tr>
+        <tr>
+          <td>4:20 PM</td>
+          <td>Closing Remarks</td>
+        </tr>
+      </table>
 
+      <div class="buttons">
+        <a href="https://forms.gle/oVpJo7SXutsZUjND6">Register to Attend</a>
+      </div>
     </div>
   </div>
 </body>
