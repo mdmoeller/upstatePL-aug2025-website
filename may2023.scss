@@ -177,17 +177,9 @@ table {
 summary {
   cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
-  // position: absolute;
-  // top: -22px;
-  // left: 110px;
+  // font-weight: bold;
+  text-align: center;
 }
-
-// summary.no-lift {
-//   position: relative;
-//   top: 0;
-//   margin-left: -3px;
-// }
 
 table.schedule {
   font-size: 18px;
