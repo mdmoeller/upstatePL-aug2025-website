@@ -53,14 +53,9 @@
       </table>
 
       <p>
-        Registration is free, and all attendees should register with the registration form by
-        <strong>May 12, 2023</strong> (even if you have an accepted talk). Contact <a
-          href="mailto:hgo@seas.upenn.edu">hgo@seas.upenn.edu</a> with questions or concerns.
+        Registration is closed. Contact <a href="mailto:hgo@seas.upenn.edu">hgo@seas.upenn.edu</a> with questions or
+        concerns.
       </p>
-
-      <div class="buttons">
-        <a href="https://forms.gle/oVpJo7SXutsZUjND6">Register to Attend</a>
-      </div>
 
       <hr />
 
@@ -69,7 +64,7 @@
       <table class="schedule">
         <tr class="break">
           <td>9:00 AM</td>
-          <td>Breakfast and Registration</td>
+          <td>Breakfast and Sign-in</td>
           <td></td>
         </tr>
         <tr>
@@ -365,6 +360,34 @@
         </tr>
         <tr>
           <td>3:20 PM</td>
+          <td><strong>Merging Inductive Relations</strong></td>
+          <td align="right">Jacob Prinz<br><em>Maryland</em></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <details>
+              <summary>Abstract</summary>
+              <p>
+                Inductive relations offer a powerful and expressive way of writing program specifications. Their
+                widespread use by proof assistant users has made them a particularly attractive target for proof
+                engineering tools such as QuickChick, a property-based testing tool for Coq which can automatically
+                derive
+                generators for values satisfying an inductive relation. However, while such generators are generally
+                efficient, there is an infrequent yet seemingly inevitable situation where their performance greatly
+                degrades: when multiple inductive relations constrain the same piece of data.
+              </p>
+              <p>
+                In this talk I will describe our addition to QuickChick, an algorithm for merging two such inductively
+                defined properties that share an index. The algorithm finds shared structure between the two relations,
+                and creates a single merged relation that is provably equivalent to the conjunction of the two. The
+                merged
+                relations can improve the performance of automatic generation by orders of magnitude.
+              </p>
+            </details>
+          </td>
+        </tr>
+        <tr>
+          <td>3:40 PM</td>
           <td><strong>Modalities for Location Virtualization</strong></td>
           <td align="right">Ismail Kuru<br><em>Drexel</em></td>
         </tr>
@@ -373,28 +396,25 @@
             <details>
               <summary>Abstract</summary>
               <p>
-                We plan to use families of modalities to describe
-                the truth of assertions in the virtual resources corresponding to virtual address spaces or logical
-                locations in a file system: a modality for each concept, with corresponding assertions about the
-                underlying physical resource.
+                We plan to introduce modal abstractions to describe the truth of assertions in the virtual resources
+                corresponding to virtual address spaces: a modality for each concept, with corresponding assertions
+                about the underlying physical resource.
               </p>
               <p>
-                For virtual memory, this might correspond to an assertion [r]P indicating that P holds in the
-                virtual address space rooted at r. This is essentially what hybrid logic [19, 49, 10, 48] calls a
-                satisfaction operator, which evaluates the truth of a predicate in a named alternative state (here,
-                address space). An example usage of this would be as part of the invariant for a sleeping thread
-                — ∃R : registerset. Context(ctxt, R) ∗ ∃P : Prop. [R.cr3]P ∗ {P ∗ CurrentRegs(R)}(R.rip) — that the
-                context structure at virtual address ctxt holds a certain register set, and that the precondition for
-                the
-                stored instruction pointer rip is that register set and the virtual invariant P, which is true in the
-                saved context’s address space rooted at cr3. This would be required to ensure safety of context switches
-                between address spaces.
+                For virtual memory, this might correspond to an assertion [r]P indicating that P holds in the virtual
+                address space rooted at r. This is essentially what hybrid logic calls a satisfaction operator, which
+                evaluates the truth of a predicate in a named alternative state (here, address space). An example usage
+                of this would be as part of the invariant for a sleeping thread — ∃R : registerset. Context(ctxt, R) ∗
+                ∃P : Prop. [R.cr3]P ∗ {P ∗ CurrentRegs(R)}(R.rip) — that the context structure at virtual address ctxt
+                holds a certain register set, and that the precondition for the stored instruction pointer rip is that
+                register set and the virtual invariant P, which is true in the saved context’s address space rooted at
+                cr3. This would be required to ensure safety of context switches between address spaces.
               </p>
             </details>
           </td>
         </tr>
         <tr>
-          <td>3:40 PM</td>
+          <td>4:00 PM</td>
           <td><strong>A Formalization of Core Why3 in Coq</strong></td>
           <td align="right">Joshua Cohen<br><em>Princeton</em></td>
         </tr>
@@ -428,34 +448,6 @@
                 standard library, and (3) proving sound some of Why3's transformations used to convert terms and
                 formulas
                 to those supported by the backend solvers.
-              </p>
-            </details>
-          </td>
-        </tr>
-        <tr>
-          <td>4:00 PM</td>
-          <td><strong>Merging Inductive Relations</strong></td>
-          <td align="right">Jacob Prinz<br><em>Maryland</em></td>
-        </tr>
-        <tr>
-          <td colspan="3">
-            <details>
-              <summary>Abstract</summary>
-              <p>
-                Inductive relations offer a powerful and expressive way of writing program specifications. Their
-                widespread use by proof assistant users has made them a particularly attractive target for proof
-                engineering tools such as QuickChick, a property-based testing tool for Coq which can automatically
-                derive
-                generators for values satisfying an inductive relation. However, while such generators are generally
-                efficient, there is an infrequent yet seemingly inevitable situation where their performance greatly
-                degrades: when multiple inductive relations constrain the same piece of data.
-              </p>
-              <p>
-                In this talk I will describe our addition to QuickChick, an algorithm for merging two such inductively
-                defined properties that share an index. The algorithm finds shared structure between the two relations,
-                and creates a single merged relation that is provably equivalent to the conjunction of the two. The
-                merged
-                relations can improve the performance of automatic generation by orders of magnitude.
               </p>
             </details>
           </td>
