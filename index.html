@@ -54,15 +54,15 @@
       </table>
 
       <p>
-        The talk proposal deadline is August 4, 2025. Registration is open until
-        August 18, 2025. 
+        The talk proposal deadline has passed. Registration is open until August 18, 2025. 
       </p>
       <p>
         There is no registration fee due to generous sponsorships from Amazon and Jane Street.
       </p>
       <p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwG0KmTbU_kdYzsO9pq9CWSX3-QltV8fqSUjzDlqN9MbhaUw/viewform?usp=dialog">Propose
-                                 a talk or register here</a>.
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdwG0KmTbU_kdYzsO9pq9CWSX3-QltV8fqSUjzDlqN9MbhaUw/viewform?usp=dialog">Register
+            to attend here</a>.
       </p>
       <p>
         Contact Mark Moeller (<a href="mailto:moeller@cs.cornell.edu">moeller@cs.cornell.edu</a>) with questions or concerns.
@@ -73,65 +73,114 @@
 
       <table class="schedule">
         <tr class="break">
-          <td>9:00 AM</td>
+          <td>8:30 AM</td>
           <td>Breakfast and Sign-in</td>
           <td></td>
         </tr>
         <tr>
-          <td>9:55 AM</td>
+          <td>9:35 AM</td>
           <td>Welcome</td>
           <td></td>
         </tr>
         <tr>
+          <td>9:40 AM</td>
+          <td><strong>Mathematically formalizing CEGIS algorithms for loop invariant automation</strong></td>
+          <td align="right">Ashish Kumar<br><em>Penn State University</em></td>
+        <tr>
+          <td colspan="3">
+          <details>
+              <summary>Abstract</summary>
+              <p>
+              We mathematically formalize novel techniques to provide
+              probabilistic guarantees for inferring loop invariants using
+              data-driven methods. We explore SA search with real analysis to
+              define the search space and epsilon nets from computational
+              geometry . We implements these algorithms and demonstrates
+              competitive performance against state-of-the-art techniques. We
+              discuss causes for failure and areas for future research. We
+              finally state the significance of the algorithm - a sound and
+              probabilistically complete algorithm for loop invariant
+              automation.
+              </p>
+          </details>
+          </td>
+        </tr>
+        </tr>
+        <tr>
           <td>10:00 AM</td>
-          <td>Talk to be announced</td>
-          <!--
-          <td><strong>Unboxed Types in OCaml</strong></td>
-          <td align="right">Richard Eisenberg<br><em>Jane Street</em></td>
-          -->
+          <td><strong>Control Envelope Synthesis for Cyber-physical Systems</strong></td>
+          <td align="right">Aditi Kabra<br><em>Carnegie Mellon University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
-          <!--
               <summary>Abstract</summary>
               <p>
-                OCaml is the biggest development language at Jane Street Capital, powering client-facing systems,
-                implementing trading strategies, and interfacing with exchanges around the world. For some of our
-                strategies, low-latency execution of a trade is vital -- every microsecond counts. In such systems, the
-                unpredictability of OCaml's garbage collection can be disastrous. We thus have teams who have developed
-                approaches to writing OCaml code that does not allocate new structures on the heap (and thus avoids
-                garbage collection); this code is difficult to write and maintain.
+              Programs running on many cyber-physical systems, such as trains,
+              planes, and self-driving cars, are safety-critical but difficult
+              to reason about and design. Formal verification can provide strong
+              safety guarantees, but most industrial controllers are too complex
+              to verify. Safe control envelopes characterize families of safe
+              controllers and are used to monitor untrusted controllers on
+              verifiable abstractions of control systems that isolate the parts
+              relevant to safety without the full complexity of a specific
+              control implementation, at runtime. They can put complex
+              controllers, even when machine learning based, within the reach of
+              formal guarantees. But correct control envelopes are still hard to
+              design because the control engineer needs to identify correct
+              control conditions that tell the controller what to do right now
+              to stay safe at all times in the future by anticipating the
+              behavior of the system over complex dynamics and an uncountably
+              infinite state space. This talk is about a control envelope
+              synthesis. We discuss techniques to synthesize provably correct
+              control envelopes that are as permissive as possible, and
+              represent them such that their synthesis composes along the
+              structure of the control problem specification.
               </p>
-              <p>
-                We are thus designing a plan to bring unboxed types to OCaml. Unboxed types exist in most other
-                languages; they are sometimes called value types. Constructing an element of an unboxed type requires no
-                allocation -- that is, no box. OCaml has resisted unboxed types because it is hard for a language to mix
-                both unboxed types and parametric polymorphism (also called generic functions). This talk will describe
-                why unboxed types and polymorphism don't mix and will explore aspects of our upcoming design and
-                implementation.
-              </p>
-          -->
             </details>
           </td>
         </tr>
         <tr>
           <td>10:20 AM</td>
-          <td>Talk to be announced</td>
+          <td><strong>Strong Semantics for Convergence, Consistency and Composability in Replicated Data Types</strong></td>
+          <td align="right">Rupashree Rangaiyengar<br><em>Princeton University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+Replicated Datatypes (RDTs) have received significant interest from both the programming languages (PL) and distributed systems (DS) communities over the past few years. Such datatypes enable strong eventual consistency, which in turn enables the creation of applications that maintain high availability and scalability. However, programming against RDTs is still a challenging task; programmers of such applications face challenges
+from the complexity of reasoning about different evolving states on different replicas and how to achieve consistency in the face of ever-changing states. But this does not have to be the case; programmers want to program against high-level abstractions, which, when used carefully, can witness stronger consistency models even under asynchronous, weakly consistent replication. By recognizing and replicating shared abstractions
+themselves, we can have the best of both worlds: a consistent, familiar programming model and fast, scalable replication.
+              </p>
+              <p>
+We introduce Orthogonal Replicated Datatypes (ORDTs), a new programming abstraction that enables modular reasoning about replicated data types. We then demonstrate that ORDTs can be sequentially consistent, even when implemented atop traditional, lazy replication. The orthogonal design of ORDTs allows multiple consistency strategies to be applied uniformly over a shared semantic foundation, facilitating compositionality
+and extensibility. Our approach employs relational semantics over complete lattices to enable deterministic n-way merges with restriction-aware validation. We provide comprehensive formal guarantees at multiple levels: we provide merge function correctness ensuring convergence, preservation, restriction compliance, idempotence and commutativity; we show how to provide provide sequential consistency via constraint
+graphs; we provide policy flexibility by enabling safe transitions between conflict resolution strategies through restriction composability. To support sequential consistency, we establish a taxonomy of mutations and observations that preserves consistency under varying operational constraints.
+              </p>
+              <p>
+Programmers can leverage our abstraction by invoking built-in library functions or by defining custom merge strategies and constraints, with guaranteed convergence across replicas. Our gossip-based runtime demonstrates that ORDTs can preserve both sequential consistency and availability under network partitions.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
           <td>10:40 AM</td>
-          <td>Talk to be announced</td>
+          <td><strong>TensorRight: Automated Verification of Tensor Graph Rewrites</strong></td>
+          <td align="right">Jai Arora<br><em>UIUC</em></td>
+          <td></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Tensor compilers, essential for generating efficient code for deep learning models across various applications, employ tensor graph rewrites as one of the key optimizations. These rewrites optimize tensor computational graphs with the expectation of preserving semantics for tensors of arbitrary rank and size. Despite this expectation, to the best of our knowledge, there does not exist a fully automated verification system to prove the soundness of these rewrites for tensors of arbitrary rank and size. Previous works, while successful in verifying rewrites with tensors of concrete rank, do not provide guarantees in the unbounded setting.
+              </p>
+              <p>
+              To fill this gap, we introduce TensorRight, the first automatic verification system that can verify tensor graph rewrites for input tensors of arbitrary rank and size. We introduce a core language, TensorRight DSL, to represent rewrite rules using a novel axis definition, called aggregated-axis, which allows us to reason about an unbounded number of axes. We achieve unbounded verification by proving that there exists a bound on tensor ranks, under which bounded verification of all instances implies the correctness of the rewrite rule in the unbounded setting. We derive an algorithm to compute this rank using the denotational semantics of TensorRight DSL. TensorRight employs this algorithm to generate a finite number of bounded-verification proof obligations, which are then dispatched to an SMT solver using symbolic execution to automatically verify the correctness of the rewrite rules. We evaluate TensorRight's verification capabilities by implementing rewrite rules present in XLA's algebraic simplifier. The results demonstrate that TensorRight can prove the correctness of 115 out of 175 rules in their full generality, while the closest automatic, bounded-verification system can express only 18 of these rules.
+              </p>
             </details>
           </td>
         </tr>
@@ -141,105 +190,198 @@
           <td></td>
         </tr>
         <tr>
-          <td>11:20 AM</td>
-          <td>Talk to be announced</td>
+          <td>11:30 AM</td>
+          <td><strong>Automating Probabilistic Separation Logic</strong></td>
+          <td align="right">Jialu Bao<br><em>Northeastern University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              To leverage independence while reasoning about probabilistic programs, researchers have recently developed a variety of separation
+logics. While these systems can greatly simplify verification, they require
+users to construct proofs manually. We design the first fully automatic
+approach to verify programs using the probabilistic separation logic PSL.
+We design a novel collection of syntax-directed proof rules and develop
+algorithms for inferring the distribution of random expressions, checking entailments, and applying axioms. We implement and evaluate our
+method in a prototype tool.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
-          <td>11:40 AM</td>
-          <td>Talk to be announced</td>
+          <td>11:50 AM</td>
+          <td><strong>A Vision for Declarative Reverse Engineering</strong></td>
+          <td align="right">Kris Micinski<br><em>Syracuse University</em></td>
+          <td></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Reverse engineering (RE) is a ubiquitous aspect of software understanding. For example, in binary reverse engineering, an expert analyst interactively discovers (``reverses'') properties of a low-level software artifact such as a Windows PE or ELF binary. Recent observational studies of RE professionals show that they employ iterated rounds of hypothesis formation and falsification, assisted via a variety of automated and ad-hoc methods. Beyond binary RE, programmers employ RE skills throughout their career, in debugging their own code, understanding their collaborators' code, or integrating with APIs and frameworks.  Unfortunately, because RE tools are extremely complex software systems, they are often very brittle and do not readily facilitate ad-hoc experimentation or integration with downstream tools. This talk proposes a new methodology for reverse engineering, declarative reverse engineering, wherein the artifact under analysis is decompiled to an arbitrarily-higher-level representation via declarative rules.  I describe Reversi, the first multi-target, multi-language declarative decompiler that scales to production-sized binaries. The project's goal is to leverage modern logic-programming engines to revolutionize the way we design decompilers, radically increasing efficiency, reusability, and scalability by cleanly isolating the logical specification of the decompilation task from low-level matters such as data-structure implementation, binary parsing, and parallelization.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
-          <td>12:00 PM</td>
-          <td>Talk to be announced</td>
+          <td>12:10 PM</td>
+          <td><strong>Type Confusion</strong></td>
+          <td align="right">Silei Ren<br><em>Cornell University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Type systems are light-weight yet powerful tools that provide end-to-end formal assurance while supporting modular reasoning. However, In modern systems--where third-party libraries and plugins using different compilers or even written in different languages interoperate---global properties enforced by a single type system can be easily violated. This problem is especially acute in decentralized-trust environments such as smart contracts, cloud services and WebAssembly modules, where principals inadvertantly or maliciously mislead others about types. In particular, the classic Confused Deputy Attack (CDA), long understood in traditional security settings, reemerges in Ethereum smart contracts when type confusion occurs.
+              </p>
+              <p>
+              To recover the end-to-end guarantees in this ""open-world"" paradigm, we formalize <em>type confusion</em> as a simulation relation between ill-typed and well-typed contexts of the program. Building on this, we present an information-flow typed core calculus with a runtime enforcement mechanism that preserves the security conditions enforced by the static type system.
+              </p>
+            </details>
           </td>
         </tr>
         <tr class="break">
-          <td>12:20 PM</td>
+          <td>12:30 PM</td>
           <td>Lunch</td>
           <td></td>
         </tr>
         <tr>
-          <td>1:40 PM</td>
-          <td>Talk to be announced</td>
+          <td>1:50 PM</td>
+          <td><strong>Automatic Bit-Precise Verification of Floating-Point Programs</strong></td>
+          <td align="right">Hossein Hojjat<br><em>Cornell University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Floating-point arithmetic enables the representation of numerical values with high precision in programs,
+              making it essential for accurate computations in safety-critical systems.
+              Due to the finite precision of floating-point numbers,
+              computations are inherently approximations of real-number arithmetic,
+              leading to rounding errors that can affect the correct functioning of a system.
+              Existing verification methods for floating-point computations have limitations,
+              particularly in handling programs with loops or achieving bit-precision.
+              This paper introduces a new encoding of floating-point operations using Constrained Horn Clauses (CHCs) over the theory of bit-vectors,
+              leveraging lazy int-blasting to reduce constraints to integer theory.
+              The approach models floating-point arithmetic in a bit-precise way, and is able to verify safety of programs with unbounded loops that are beyond the capabilities of existing tools.
+              We have integrated our encoding into the JayHorn model checker for Java and demonstrate
+              its applicability across a set of benchmarks from multiple domains.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
-          <td>2:00 PM</td>
-          <td>Talk to be announced</td>
+          <td>2:10 PM</td>
+          <td><strong>Relational Verification of Configurable Programs: A Lens-based Approach</strong></td>
+          <td align="right">Eric Hayden Campbell<br><em>UT Austin</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Spectacle is a novel framework for verifying relational properties of reconfigurable programs---programs whose behavior is parameterized by configurations that may evolve dynamically at runtime. Reasoning about such programs poses unique challenges: one must verify not only relations on the programs but also relations on the configurations. Existing relational struggle to reason compositionally about reconfigurable programs, relying on complex naming conventions to manage global configuration variables---to say nothing about how they are configured.
+              </p>
+              <p>
+              Spectacle addresses this gap by factoring relational reasoning through a different abstraction, a bidirectional lens, that maintains a relation on configuration. Rather than viewing lenses solely as a method for data synchronization, Spectacle uses them to build relational invariants that mediate behavior between reconfigurable systems. Additionally, Spectacle is equipped with a proof system that lifts lens-maintained relations on configurations to relational specifications over executions, allowing modular and compositional verification. This proof system is used to prove the equivalence of networking programs.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
-          <td>2:20 PM</td>
-          <td>Talk to be announced</td>
+          <td>2:30 PM</td>
+          <td><strong>Probabilistic Abstract Interpretation for Quantifying Side Channel Leakage</strong></td>
+          <td align="right">Keara Hill<br><em>Binghamton University</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              Computer systems are vulnerable to attacks via side channels, which leak information about the computation through the computation's secondary effects. For example, timing side channels leak sensitive information such as passwords through small differences in execution time. To prevent this, developers use static analyses to compute bounds on the amount of information a side channel can leak. To compute a correct bound, an analysis requires a model of the low-level system behavior, such as assumptions about the execution time of individual instructions. In this talk, I will present our work that leverages probabilistic models of low-level system components to analyze side-channel leakage. Our analyzer implements an abstract interpretation over a probability domain for LLVM IR, and computes a bound on the maximal leakage of the IR program. Preliminary results show that, for simple password-checking programs, our analyzer can accurately determine the amount of timing side-channel leakage.
+              </p>
+            </details>
+          </td>
+        </tr>
+        <tr>
+          <td>2:50 PM</td>
+          <td><strong>Adjoint Types</strong></td>
+          <td align="right">Sophia Roshal<br><em>Carnegie Mellon University</em></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <details>
+              <summary>Abstract</summary>
+              <p>
+              Functional Programming languages are growing in popularity due to their strong guarantees and increased ease of proving correct. However, they are often difficult to optimize. Adjoint types provide a method of mixing substructural modes (for example linear, affine, strict, or unrestricted) in a type system while preserving the proof-theoretic and computational properties of each mode. Through this system, we can perform compiler optimizations or provide certain safety guarantees on parts of a program whose mode supports them, while not restricting the programmer’s ability to write code as they usually do. This talk will give an overview of such a type system, including an inference system for modes.
+              </p>
             </details>
           </td>
         </tr>
         <tr class="break">
-          <td>2:40 PM</td>
+          <td>3:10 PM</td>
           <td>Coffee</td>
           <td></td>
         </tr>
         <tr>
-          <td>3:20 PM</td>
-        </tr>
-        <tr>
-          <td colspan="3">
-            <details>
-            </details>
-          </td>
-        </tr>
-        <tr>
           <td>3:40 PM</td>
-          <td>Talk to be announced</td>
+          <td><strong>Cryptis: Cryptographic Reasoning in Separation Logic</strong></td>
+          <td align="right">Arthur Azevedo de Amorim<br><em>Rochester Institute of Technology</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              We introduce Cryptis, an extension of the Iris separation logic that can be used to verify cryptographic components using the symbolic model of cryptography. The combination of separation logic and cryptographic reasoning allows us to prove the correctness of a protocol and later reuse this result to verify larger systems that rely on the protocol. To make this integration possible, we propose novel specifications for authentication protocols that allow agents in a network to agree on the use of system resources. We evaluate our approach by verifying various authentication protocols and a key-value store server that uses these authentication protocols to connect to clients. Our results are formalized in Coq.
+              </p>
             </details>
           </td>
         </tr>
         <tr>
           <td>4:00 PM</td>
-          <td>Talk to be announced</td>
+          <td><strong>Concurrent Lambda Calculus for MPI</strong></td>
+          <td align="right">Keith Allen<br><em>University at Buffalo</em></td>
         </tr>
         <tr>
           <td colspan="3">
             <details>
+              <summary>Abstract</summary>
+              <p>
+              The Message Passing Interface (MPI), widely used in high performance computing, is typically implemented in imperative languages such as C, C++, or Fortran. This makes the verification of programs written in specific MPI implementations difficult. We are developing a concurrent lambda calculus to capture the message passing capabilities of MPI, which we later intend to use to verify popular algorithms used in MPI programming. We are currently focused on adding features needed for everyday MPI programming while still keeping the language slim and recognizable as a concurrent lambda calculus.
+              </p>
+              <p>
+              This work is in progress and we are interested in feedback both about important MPI features to capture as well as the design of the language.
+              </p>
+            </details>
+          </td>
+        </tr>
+        <tr>
+          <td>4:20 PM</td>
+          <td><strong>Answer set programming for stable matching</strong></td>
+          <td align="right">Noah Bertram<br><em>Cornell University</em></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <details>
+              <summary>Abstract</summary>
+              <p>
+              Stable matching mechanisms are used in a variety of settings to match agents together, with a prominent example being the US national residency matching program.
+              In this talk, we report ongoing work to examine stable matching mechanisms from a formal verification perspective using a form of logic programming known as answer set programming.
+              First, we encode the stable matching problem as an answer set program and therefore, any answer set solver can produce correct stable matchings.
+              However, modern answer set solvers are unable to handle large stable matching instances because their program grounding approach incurs enormous memory usage.
+              To address the memory issue, we introduce an answer set solver that lazily grounds programs with modifiable solving strategies. While lazy grounding based solvers are much slower, we observe that their behavior is similar to that of stable matching mechanisms, and so provide an example of an efficient stable matching mechanism whose behavior can be realized as a choice of strategy for our solver.
+              </p>
             </details>
           </td>
         </tr>
         <tr class="break">
-          <td>4:20 PM</td>
+          <td>4:40 PM</td>
           <td>Closing Remarks</td>
           <td></td>
         </tr>
